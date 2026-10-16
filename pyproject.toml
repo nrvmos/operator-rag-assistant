@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=78.1.1"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "operator-rag-assistant"
+version = "0.1.0"
+description = "A citation-first assistant for operating documents that refuses when the documents do not cover the question."
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "Nathan Ramos" }]
+requires-python = ">=3.10"
+dependencies = [
+  "scikit-learn>=1.5",
+  "streamlit>=1.54",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=9.0.3",
+]
+pdf = [
+  "pypdf>=6.19",
+  "fpdf2>=2.7",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src", "."]
+testpaths = ["tests", "projects"]

@@ -1,0 +1,769 @@
+{
+  "run_utc": "2026-10-13T18:29:18Z",
+  "source_revision": "a0eaf1968f988bd5d38e0187ef29be1e804040a8",
+  "dataset": {
+    "easy": "rag_eval.jsonl",
+    "hard": "rag_eval_hard.jsonl"
+  },
+  "model": "local-inference",
+  "endpoint": "http://127.0.0.1:8080/v1/chat/completions",
+  "generation": {
+    "temperature": 0,
+    "top_k": 3
+  },
+  "set": "easy",
+  "n": 20,
+  "citation_accuracy": 0.933,
+  "refusal_accuracy": 1.0,
+  "answer_correctness": 1.0,
+  "retrieval_baseline": 1.0,
+  "rows": [
+    {
+      "id": "q01",
+      "answerable": true,
+      "expected_source": "industrial_ai_guardrails.md",
+      "expected_sources": null,
+      "expected_keywords": [
+        "decision support"
+      ],
+      "answer": "Decision support rather than authority",
+      "cited_chunks": [
+        "Industrial AI tools should be designed around scope, traceability, and escalation. A model or assistant should make clear what data it used, what question it is answering, and what decisions remain with qualified people. For process operations, AI outputs should be treated as decision support rather than authority. The system should avoid giving site-specific instructions, bypass guidance, emergency actions, or steps that conflict with approved procedures. Good industrial AI interfaces make limitations visible. Examples include stale data warnings, low-confidence indicators, source citations, model drift checks, and escalation prompts. The interface should make it easy for operators, engineers, and maintenance staff to verify the evidence behind a recommendation. When an AI assistant is used for document lookup, it should cite sources and show retrieved text. If the source material does not contain the answer, the assistant should say so rather than"
+      ],
+      "refused": false,
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "industrial_ai_guardrails.md",
+          "text": "Industrial AI tools should be designed around scope, traceability, and escalation. A model or assistant should make clear what data it used, what question it is answering, and what decisions remain with qualified people. For process operations, AI outputs should be treated as decision support rather than authority. The system should avoid giving site-specific instructions, bypass guidance, emergency actions, or steps that conflict with approved procedures. Good industrial AI interfaces make limitations visible. Examples include stale data warnings, low-confidence indicators, source citations, model drift checks, and escalation prompts. The interface should make it easy for operators, engineers, and maintenance staff to verify the evidence behind a recommendation. When an AI assistant is used for document lookup, it should cite sources and show retrieved text. If the source material does not contain the answer, the assistant should say so rather than"
+        },
+        {
+          "rank": 2,
+          "source": "pump_reliability_study_note.md",
+          "text": "This public-safe study note summarizes general pump reliability concepts. It is not a maintenance procedure. Common early indicators of pump problems can include rising vibration, unusual noise, seal leakage, bearing temperature increases, flow instability, suction pressure changes, discharge pressure changes, and motor current changes. These indicators are more useful when viewed as trends rather than isolated points. Reliability analysis often combines operator rounds, historian trends, maintenance history, process context, and inspection findings. A single data point is rarely enough to identify root cause. For example, vibration can be related to cavitation, misalignment, bearing wear, process conditions, or instrumentation problems. Good analytics tools should help prioritize attention and show evidence. They should not hide uncertainty. A useful dashboard shows what changed, when it changed, which tags contributed to the alert, and whether similar events have happened before. Any decision to stop,"
+        },
+        {
+          "rank": 3,
+          "source": "shift_handover_simulated_sop.md",
+          "text": "This simulated document describes general study concepts for shift handover. It is not a real plant procedure. A useful shift handover gives the incoming team enough context to understand the current state of the area, the work that changed during the shift, and the conditions that need attention. It should include abnormal equipment behavior, recent process deviations, active permits, isolated equipment, maintenance work, temporary operating limits, and any instructions from supervision. Abnormal conditions should be described with time, observed symptoms, trend direction, actions already taken, and the current escalation state. A handover note should avoid vague comments such as \"pump acting weird\" and instead describe observations such as increased vibration, seal pot level change, bearing temperature trend, unusual sound, or reduced flow stability. Good handover practice also includes checking whether the field condition matches the control-room picture. Operators should be"
+        }
+      ],
+      "top1_source": "industrial_ai_guardrails.md",
+      "keyword_hits": [
+        "decision support"
+      ],
+      "citation_all_required": true,
+      "citation_no_extra": true,
+      "cited_docs": [
+        "industrial_ai_guardrails.md"
+      ],
+      "verdict": "pass"
+    },
+    {
+      "id": "q02",
+      "answerable": true,
+      "expected_source": "industrial_ai_guardrails.md",
+      "expected_sources": null,
+      "expected_keywords": [
+        "say so"
+      ],
+      "answer": "It should say so rather than inventing an answer.",
+      "cited_chunks": [
+        "assistant is used for document lookup, it should cite sources and show retrieved text. If the source material does not contain the answer, the assistant should say so rather than inventing an answer.",
+        "Industrial AI tools should be designed around scope, traceability, and escalation. A model or assistant should make clear what data it used, what question it is answering, and what decisions remain with qualified people. For process operations, AI outputs should be treated as decision support rather than authority. The system should avoid giving site-specific instructions, bypass guidance, emergency actions, or steps that conflict with approved procedures. Good industrial AI interfaces make limitations visible. Examples include stale data warnings, low-confidence indicators, source citations, model drift checks, and escalation prompts. The interface should make it easy for operators, engineers, and maintenance staff to verify the evidence behind a recommendation. When an AI assistant is used for document lookup, it should cite sources and show retrieved text. If the source material does not contain the answer, the assistant should say so rather than"
+      ],
+      "refused": false,
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "industrial_ai_guardrails.md",
+          "text": "assistant is used for document lookup, it should cite sources and show retrieved text. If the source material does not contain the answer, the assistant should say so rather than inventing an answer."
+        },
+        {
+          "rank": 2,
+          "source": "industrial_ai_guardrails.md",
+          "text": "Industrial AI tools should be designed around scope, traceability, and escalation. A model or assistant should make clear what data it used, what question it is answering, and what decisions remain with qualified people. For process operations, AI outputs should be treated as decision support rather than authority. The system should avoid giving site-specific instructions, bypass guidance, emergency actions, or steps that conflict with approved procedures. Good industrial AI interfaces make limitations visible. Examples include stale data warnings, low-confidence indicators, source citations, model drift checks, and escalation prompts. The interface should make it easy for operators, engineers, and maintenance staff to verify the evidence behind a recommendation. When an AI assistant is used for document lookup, it should cite sources and show retrieved text. If the source material does not contain the answer, the assistant should say so rather than"
+        }
+      ],
+      "top1_source": "industrial_ai_guardrails.md",
+      "keyword_hits": [
+        "say so"
+      ],
+      "citation_all_required": true,
+      "citation_no_extra": true,
+      "cited_docs": [
+        "industrial_ai_guardrails.md"
+      ],
+      "verdict": "pass"
+    },
+    {
+      "id": "q03",
+      "answerable": true,
+      "expected_source": "industrial_ai_guardrails.md",
+      "expected_sources": null,
+      "expected_keywords": [
+        "site-specific",
+        "emergency"
+      ],
+      "answer": "Site-specific instructions, bypass guidance, emergency actions, or steps that conflict with approved procedures.",
+      "cited_chunks": [
+        "Industrial AI tools should be designed around scope, traceability, and escalation. A model or assistant should make clear what data it used, what question it is answering, and what decisions remain with qualified people. For process operations, AI outputs should be treated as decision support rather than authority. The system should avoid giving site-specific instructions, bypass guidance, emergency actions, or steps that conflict with approved procedures. Good industrial AI interfaces make limitations visible. Examples include stale data warnings, low-confidence indicators, source citations, model drift checks, and escalation prompts. The interface should make it easy for operators, engineers, and maintenance staff to verify the evidence behind a recommendation. When an AI assistant is used for document lookup, it should cite sources and show retrieved text. If the source material does not contain the answer, the assistant should say so rather than"
+      ],
+      "refused": false,
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "industrial_ai_guardrails.md",
+          "text": "Industrial AI tools should be designed around scope, traceability, and escalation. A model or assistant should make clear what data it used, what question it is answering, and what decisions remain with qualified people. For process operations, AI outputs should be treated as decision support rather than authority. The system should avoid giving site-specific instructions, bypass guidance, emergency actions, or steps that conflict with approved procedures. Good industrial AI interfaces make limitations visible. Examples include stale data warnings, low-confidence indicators, source citations, model drift checks, and escalation prompts. The interface should make it easy for operators, engineers, and maintenance staff to verify the evidence behind a recommendation. When an AI assistant is used for document lookup, it should cite sources and show retrieved text. If the source material does not contain the answer, the assistant should say so rather than"
+        },
+        {
+          "rank": 2,
+          "source": "shift_handover_simulated_sop.md",
+          "text": "This simulated document describes general study concepts for shift handover. It is not a real plant procedure. A useful shift handover gives the incoming team enough context to understand the current state of the area, the work that changed during the shift, and the conditions that need attention. It should include abnormal equipment behavior, recent process deviations, active permits, isolated equipment, maintenance work, temporary operating limits, and any instructions from supervision. Abnormal conditions should be described with time, observed symptoms, trend direction, actions already taken, and the current escalation state. A handover note should avoid vague comments such as \"pump acting weird\" and instead describe observations such as increased vibration, seal pot level change, bearing temperature trend, unusual sound, or reduced flow stability. Good handover practice also includes checking whether the field condition matches the control-room picture. Operators should be"
+        }
+      ],
+      "top1_source": "industrial_ai_guardrails.md",
+      "keyword_hits": [
+        "site-specific",
+        "emergency"
+      ],
+      "citation_all_required": true,
+      "citation_no_extra": true,
+      "cited_docs": [
+        "industrial_ai_guardrails.md"
+      ],
+      "verdict": "pass"
+    },
+    {
+      "id": "q04",
+      "answerable": true,
+      "expected_source": "industrial_ai_guardrails.md",
+      "expected_sources": null,
+      "expected_keywords": [
+        "citations",
+        "confidence"
+      ],
+      "answer": "Stale data warnings, low-confidence indicators, source citations, model drift checks, and escalation prompts make limitations visible.",
+      "cited_chunks": [
+        "Industrial AI tools should be designed around scope, traceability, and escalation. A model or assistant should make clear what data it used, what question it is answering, and what decisions remain with qualified people. For process operations, AI outputs should be treated as decision support rather than authority. The system should avoid giving site-specific instructions, bypass guidance, emergency actions, or steps that conflict with approved procedures. Good industrial AI interfaces make limitations visible. Examples include stale data warnings, low-confidence indicators, source citations, model drift checks, and escalation prompts. The interface should make it easy for operators, engineers, and maintenance staff to verify the evidence behind a recommendation. When an AI assistant is used for document lookup, it should cite sources and show retrieved text. If the source material does not contain the answer, the assistant should say so rather than"
+      ],
+      "refused": false,
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "industrial_ai_guardrails.md",
+          "text": "Industrial AI tools should be designed around scope, traceability, and escalation. A model or assistant should make clear what data it used, what question it is answering, and what decisions remain with qualified people. For process operations, AI outputs should be treated as decision support rather than authority. The system should avoid giving site-specific instructions, bypass guidance, emergency actions, or steps that conflict with approved procedures. Good industrial AI interfaces make limitations visible. Examples include stale data warnings, low-confidence indicators, source citations, model drift checks, and escalation prompts. The interface should make it easy for operators, engineers, and maintenance staff to verify the evidence behind a recommendation. When an AI assistant is used for document lookup, it should cite sources and show retrieved text. If the source material does not contain the answer, the assistant should say so rather than"
+        }
+      ],
+      "top1_source": "industrial_ai_guardrails.md",
+      "keyword_hits": [
+        "citations",
+        "confidence"
+      ],
+      "citation_all_required": true,
+      "citation_no_extra": true,
+      "cited_docs": [
+        "industrial_ai_guardrails.md"
+      ],
+      "verdict": "pass"
+    },
+    {
+      "id": "q05",
+      "answerable": true,
+      "expected_source": "industrial_ai_guardrails.md",
+      "expected_sources": null,
+      "expected_keywords": [
+        "sources",
+        "retrieved"
+      ],
+      "answer": "It should cite sources and show the retrieved text.",
+      "cited_chunks": [
+        "assistant is used for document lookup, it should cite sources and show retrieved text. If the source material does not contain the answer, the assistant should say so rather than inventing an answer.",
+        "Industrial AI tools should be designed around scope, traceability, and escalation. A model or assistant should make clear what data it used, what question it is answering, and what decisions remain with qualified people. For process operations, AI outputs should be treated as decision support rather than authority. The system should avoid giving site-specific instructions, bypass guidance, emergency actions, or steps that conflict with approved procedures. Good industrial AI interfaces make limitations visible. Examples include stale data warnings, low-confidence indicators, source citations, model drift checks, and escalation prompts. The interface should make it easy for operators, engineers, and maintenance staff to verify the evidence behind a recommendation. When an AI assistant is used for document lookup, it should cite sources and show retrieved text. If the source material does not contain the answer, the assistant should say so rather than"
+      ],
+      "refused": false,
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "industrial_ai_guardrails.md",
+          "text": "assistant is used for document lookup, it should cite sources and show retrieved text. If the source material does not contain the answer, the assistant should say so rather than inventing an answer."
+        },
+        {
+          "rank": 2,
+          "source": "industrial_ai_guardrails.md",
+          "text": "Industrial AI tools should be designed around scope, traceability, and escalation. A model or assistant should make clear what data it used, what question it is answering, and what decisions remain with qualified people. For process operations, AI outputs should be treated as decision support rather than authority. The system should avoid giving site-specific instructions, bypass guidance, emergency actions, or steps that conflict with approved procedures. Good industrial AI interfaces make limitations visible. Examples include stale data warnings, low-confidence indicators, source citations, model drift checks, and escalation prompts. The interface should make it easy for operators, engineers, and maintenance staff to verify the evidence behind a recommendation. When an AI assistant is used for document lookup, it should cite sources and show retrieved text. If the source material does not contain the answer, the assistant should say so rather than"
+        },
+        {
+          "rank": 3,
+          "source": "shift_handover_simulated_sop.md",
+          "text": "This simulated document describes general study concepts for shift handover. It is not a real plant procedure. A useful shift handover gives the incoming team enough context to understand the current state of the area, the work that changed during the shift, and the conditions that need attention. It should include abnormal equipment behavior, recent process deviations, active permits, isolated equipment, maintenance work, temporary operating limits, and any instructions from supervision. Abnormal conditions should be described with time, observed symptoms, trend direction, actions already taken, and the current escalation state. A handover note should avoid vague comments such as \"pump acting weird\" and instead describe observations such as increased vibration, seal pot level change, bearing temperature trend, unusual sound, or reduced flow stability. Good handover practice also includes checking whether the field condition matches the control-room picture. Operators should be"
+        }
+      ],
+      "top1_source": "industrial_ai_guardrails.md",
+      "keyword_hits": [
+        "sources",
+        "retrieved"
+      ],
+      "citation_all_required": true,
+      "citation_no_extra": true,
+      "cited_docs": [
+        "industrial_ai_guardrails.md"
+      ],
+      "verdict": "pass"
+    },
+    {
+      "id": "q06",
+      "answerable": true,
+      "expected_source": "pump_reliability_study_note.md",
+      "expected_sources": null,
+      "expected_keywords": [
+        "vibration",
+        "temperature"
+      ],
+      "answer": "Common early indicators include rising vibration, unusual noise, seal leakage, bearing temperature increases, flow instability, suction pressure changes, discharge pressure changes, and motor current changes.",
+      "cited_chunks": [
+        "This public-safe study note summarizes general pump reliability concepts. It is not a maintenance procedure. Common early indicators of pump problems can include rising vibration, unusual noise, seal leakage, bearing temperature increases, flow instability, suction pressure changes, discharge pressure changes, and motor current changes. These indicators are more useful when viewed as trends rather than isolated points. Reliability analysis often combines operator rounds, historian trends, maintenance history, process context, and inspection findings. A single data point is rarely enough to identify root cause. For example, vibration can be related to cavitation, misalignment, bearing wear, process conditions, or instrumentation problems. Good analytics tools should help prioritize attention and show evidence. They should not hide uncertainty. A useful dashboard shows what changed, when it changed, which tags contributed to the alert, and whether similar events have happened before. Any decision to stop,",
+        "This simulated document describes general study concepts for shift handover. It is not a real plant procedure. A useful shift handover gives the incoming team enough context to understand the current state of the area, the work that changed during the shift, and the conditions that need attention. It should include abnormal equipment behavior, recent process deviations, active permits, isolated equipment, maintenance work, temporary operating limits, and any instructions from supervision. Abnormal conditions should be described with time, observed symptoms, trend direction, actions already taken, and the current escalation state. A handover note should avoid vague comments such as \"pump acting weird\" and instead describe observations such as increased vibration, seal pot level change, bearing temperature trend, unusual sound, or reduced flow stability. Good handover practice also includes checking whether the field condition matches the control-room picture. Operators should be"
+      ],
+      "refused": false,
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "pump_reliability_study_note.md",
+          "text": "This public-safe study note summarizes general pump reliability concepts. It is not a maintenance procedure. Common early indicators of pump problems can include rising vibration, unusual noise, seal leakage, bearing temperature increases, flow instability, suction pressure changes, discharge pressure changes, and motor current changes. These indicators are more useful when viewed as trends rather than isolated points. Reliability analysis often combines operator rounds, historian trends, maintenance history, process context, and inspection findings. A single data point is rarely enough to identify root cause. For example, vibration can be related to cavitation, misalignment, bearing wear, process conditions, or instrumentation problems. Good analytics tools should help prioritize attention and show evidence. They should not hide uncertainty. A useful dashboard shows what changed, when it changed, which tags contributed to the alert, and whether similar events have happened before. Any decision to stop,"
+        },
+        {
+          "rank": 2,
+          "source": "shift_handover_simulated_sop.md",
+          "text": "This simulated document describes general study concepts for shift handover. It is not a real plant procedure. A useful shift handover gives the incoming team enough context to understand the current state of the area, the work that changed during the shift, and the conditions that need attention. It should include abnormal equipment behavior, recent process deviations, active permits, isolated equipment, maintenance work, temporary operating limits, and any instructions from supervision. Abnormal conditions should be described with time, observed symptoms, trend direction, actions already taken, and the current escalation state. A handover note should avoid vague comments such as \"pump acting weird\" and instead describe observations such as increased vibration, seal pot level change, bearing temperature trend, unusual sound, or reduced flow stability. Good handover practice also includes checking whether the field condition matches the control-room picture. Operators should be"
+        },
+        {
+          "rank": 3,
+          "source": "industrial_ai_guardrails.md",
+          "text": "Industrial AI tools should be designed around scope, traceability, and escalation. A model or assistant should make clear what data it used, what question it is answering, and what decisions remain with qualified people. For process operations, AI outputs should be treated as decision support rather than authority. The system should avoid giving site-specific instructions, bypass guidance, emergency actions, or steps that conflict with approved procedures. Good industrial AI interfaces make limitations visible. Examples include stale data warnings, low-confidence indicators, source citations, model drift checks, and escalation prompts. The interface should make it easy for operators, engineers, and maintenance staff to verify the evidence behind a recommendation. When an AI assistant is used for document lookup, it should cite sources and show retrieved text. If the source material does not contain the answer, the assistant should say so rather than"
+        }
+      ],
+      "top1_source": "pump_reliability_study_note.md",
+      "keyword_hits": [
+        "vibration",
+        "temperature"
+      ],
+      "citation_all_required": true,
+      "citation_no_extra": false,
+      "cited_docs": [
+        "pump_reliability_study_note.md"
+      ],
+      "verdict": "fail"
+    },
+    {
+      "id": "q07",
+      "answerable": true,
+      "expected_source": "pump_reliability_study_note.md",
+      "expected_sources": null,
+      "expected_keywords": [
+        "trends"
+      ],
+      "answer": "Because a single data point is rarely enough to identify root cause; trends show what changed, when it changed, and how multiple indicators relate over time, helping distinguish real pump problems from noise or other causes.",
+      "cited_chunks": [
+        "This public-safe study note summarizes general pump reliability concepts. It is not a maintenance procedure. Common early indicators of pump problems can include rising vibration, unusual noise, seal leakage, bearing temperature increases, flow instability, suction pressure changes, discharge pressure changes, and motor current changes. These indicators are more useful when viewed as trends rather than isolated points. Reliability analysis often combines operator rounds, historian trends, maintenance history, process context, and inspection findings. A single data point is rarely enough to identify root cause. For example, vibration can be related to cavitation, misalignment, bearing wear, process conditions, or instrumentation problems. Good analytics tools should help prioritize attention and show evidence. They should not hide uncertainty. A useful dashboard shows what changed, when it changed, which tags contributed to the alert, and whether similar events have happened before. Any decision to stop,"
+      ],
+      "refused": false,
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "pump_reliability_study_note.md",
+          "text": "This public-safe study note summarizes general pump reliability concepts. It is not a maintenance procedure. Common early indicators of pump problems can include rising vibration, unusual noise, seal leakage, bearing temperature increases, flow instability, suction pressure changes, discharge pressure changes, and motor current changes. These indicators are more useful when viewed as trends rather than isolated points. Reliability analysis often combines operator rounds, historian trends, maintenance history, process context, and inspection findings. A single data point is rarely enough to identify root cause. For example, vibration can be related to cavitation, misalignment, bearing wear, process conditions, or instrumentation problems. Good analytics tools should help prioritize attention and show evidence. They should not hide uncertainty. A useful dashboard shows what changed, when it changed, which tags contributed to the alert, and whether similar events have happened before. Any decision to stop,"
+        },
+        {
+          "rank": 2,
+          "source": "shift_handover_simulated_sop.md",
+          "text": "This simulated document describes general study concepts for shift handover. It is not a real plant procedure. A useful shift handover gives the incoming team enough context to understand the current state of the area, the work that changed during the shift, and the conditions that need attention. It should include abnormal equipment behavior, recent process deviations, active permits, isolated equipment, maintenance work, temporary operating limits, and any instructions from supervision. Abnormal conditions should be described with time, observed symptoms, trend direction, actions already taken, and the current escalation state. A handover note should avoid vague comments such as \"pump acting weird\" and instead describe observations such as increased vibration, seal pot level change, bearing temperature trend, unusual sound, or reduced flow stability. Good handover practice also includes checking whether the field condition matches the control-room picture. Operators should be"
+        },
+        {
+          "rank": 3,
+          "source": "pump_reliability_study_note.md",
+          "text": "should not hide uncertainty. A useful dashboard shows what changed, when it changed, which tags contributed to the alert, and whether similar events have happened before. Any decision to stop, start, isolate, or repair equipment must follow approved site procedures and qualified direction."
+        }
+      ],
+      "top1_source": "pump_reliability_study_note.md",
+      "keyword_hits": [
+        "trends"
+      ],
+      "citation_all_required": true,
+      "citation_no_extra": true,
+      "cited_docs": [
+        "pump_reliability_study_note.md"
+      ],
+      "verdict": "pass"
+    },
+    {
+      "id": "q08",
+      "answerable": true,
+      "expected_source": "pump_reliability_study_note.md",
+      "expected_sources": null,
+      "expected_keywords": [
+        "cavitation",
+        "misalignment"
+      ],
+      "answer": "Cavitation, misalignment, bearing wear, process conditions, or instrumentation problems",
+      "cited_chunks": [
+        "This public-safe study note summarizes general pump reliability concepts. It is not a maintenance procedure. Common early indicators of pump problems can include rising vibration, unusual noise, seal leakage, bearing temperature increases, flow instability, suction pressure changes, discharge pressure changes, and motor current changes. These indicators are more useful when viewed as trends rather than isolated points. Reliability analysis often combines operator rounds, historian trends, maintenance history, process context, and inspection findings. A single data point is rarely enough to identify root cause. For example, vibration can be related to cavitation, misalignment, bearing wear, process conditions, or instrumentation problems. Good analytics tools should help prioritize attention and show evidence. They should not hide uncertainty. A useful dashboard shows what changed, when it changed, which tags contributed to the alert, and whether similar events have happened before. Any decision to stop,"
+      ],
+      "refused": false,
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "pump_reliability_study_note.md",
+          "text": "This public-safe study note summarizes general pump reliability concepts. It is not a maintenance procedure. Common early indicators of pump problems can include rising vibration, unusual noise, seal leakage, bearing temperature increases, flow instability, suction pressure changes, discharge pressure changes, and motor current changes. These indicators are more useful when viewed as trends rather than isolated points. Reliability analysis often combines operator rounds, historian trends, maintenance history, process context, and inspection findings. A single data point is rarely enough to identify root cause. For example, vibration can be related to cavitation, misalignment, bearing wear, process conditions, or instrumentation problems. Good analytics tools should help prioritize attention and show evidence. They should not hide uncertainty. A useful dashboard shows what changed, when it changed, which tags contributed to the alert, and whether similar events have happened before. Any decision to stop,"
+        },
+        {
+          "rank": 2,
+          "source": "shift_handover_simulated_sop.md",
+          "text": "This simulated document describes general study concepts for shift handover. It is not a real plant procedure. A useful shift handover gives the incoming team enough context to understand the current state of the area, the work that changed during the shift, and the conditions that need attention. It should include abnormal equipment behavior, recent process deviations, active permits, isolated equipment, maintenance work, temporary operating limits, and any instructions from supervision. Abnormal conditions should be described with time, observed symptoms, trend direction, actions already taken, and the current escalation state. A handover note should avoid vague comments such as \"pump acting weird\" and instead describe observations such as increased vibration, seal pot level change, bearing temperature trend, unusual sound, or reduced flow stability. Good handover practice also includes checking whether the field condition matches the control-room picture. Operators should be"
+        }
+      ],
+      "top1_source": "pump_reliability_study_note.md",
+      "keyword_hits": [
+        "cavitation",
+        "misalignment"
+      ],
+      "citation_all_required": true,
+      "citation_no_extra": true,
+      "cited_docs": [
+        "pump_reliability_study_note.md"
+      ],
+      "verdict": "pass"
+    },
+    {
+      "id": "q09",
+      "answerable": true,
+      "expected_source": "pump_reliability_study_note.md",
+      "expected_sources": null,
+      "expected_keywords": [
+        "changed",
+        "tags"
+      ],
+      "answer": "It should show what changed, when it changed, which tags contributed to the alert, and whether similar events have happened before.",
+      "cited_chunks": [
+        "should not hide uncertainty. A useful dashboard shows what changed, when it changed, which tags contributed to the alert, and whether similar events have happened before. Any decision to stop, start, isolate, or repair equipment must follow approved site procedures and qualified direction.",
+        "This public-safe study note summarizes general pump reliability concepts. It is not a maintenance procedure. Common early indicators of pump problems can include rising vibration, unusual noise, seal leakage, bearing temperature increases, flow instability, suction pressure changes, discharge pressure changes, and motor current changes. These indicators are more useful when viewed as trends rather than isolated points. Reliability analysis often combines operator rounds, historian trends, maintenance history, process context, and inspection findings. A single data point is rarely enough to identify root cause. For example, vibration can be related to cavitation, misalignment, bearing wear, process conditions, or instrumentation problems. Good analytics tools should help prioritize attention and show evidence. They should not hide uncertainty. A useful dashboard shows what changed, when it changed, which tags contributed to the alert, and whether similar events have happened before. Any decision to stop,"
+      ],
+      "refused": false,
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "pump_reliability_study_note.md",
+          "text": "should not hide uncertainty. A useful dashboard shows what changed, when it changed, which tags contributed to the alert, and whether similar events have happened before. Any decision to stop, start, isolate, or repair equipment must follow approved site procedures and qualified direction."
+        },
+        {
+          "rank": 2,
+          "source": "pump_reliability_study_note.md",
+          "text": "This public-safe study note summarizes general pump reliability concepts. It is not a maintenance procedure. Common early indicators of pump problems can include rising vibration, unusual noise, seal leakage, bearing temperature increases, flow instability, suction pressure changes, discharge pressure changes, and motor current changes. These indicators are more useful when viewed as trends rather than isolated points. Reliability analysis often combines operator rounds, historian trends, maintenance history, process context, and inspection findings. A single data point is rarely enough to identify root cause. For example, vibration can be related to cavitation, misalignment, bearing wear, process conditions, or instrumentation problems. Good analytics tools should help prioritize attention and show evidence. They should not hide uncertainty. A useful dashboard shows what changed, when it changed, which tags contributed to the alert, and whether similar events have happened before. Any decision to stop,"
+        },
+        {
+          "rank": 3,
+          "source": "shift_handover_simulated_sop.md",
+          "text": "This simulated document describes general study concepts for shift handover. It is not a real plant procedure. A useful shift handover gives the incoming team enough context to understand the current state of the area, the work that changed during the shift, and the conditions that need attention. It should include abnormal equipment behavior, recent process deviations, active permits, isolated equipment, maintenance work, temporary operating limits, and any instructions from supervision. Abnormal conditions should be described with time, observed symptoms, trend direction, actions already taken, and the current escalation state. A handover note should avoid vague comments such as \"pump acting weird\" and instead describe observations such as increased vibration, seal pot level change, bearing temperature trend, unusual sound, or reduced flow stability. Good handover practice also includes checking whether the field condition matches the control-room picture. Operators should be"
+        }
+      ],
+      "top1_source": "pump_reliability_study_note.md",
+      "keyword_hits": [
+        "changed",
+        "tags"
+      ],
+      "citation_all_required": true,
+      "citation_no_extra": true,
+      "cited_docs": [
+        "pump_reliability_study_note.md"
+      ],
+      "verdict": "pass"
+    },
+    {
+      "id": "q10",
+      "answerable": true,
+      "expected_source": "pump_reliability_study_note.md",
+      "expected_sources": null,
+      "expected_keywords": [
+        "approved",
+        "procedures"
+      ],
+      "answer": "Approved site procedures and qualified direction",
+      "cited_chunks": [
+        "should not hide uncertainty. A useful dashboard shows what changed, when it changed, which tags contributed to the alert, and whether similar events have happened before. Any decision to stop, start, isolate, or repair equipment must follow approved site procedures and qualified direction."
+      ],
+      "refused": false,
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "pump_reliability_study_note.md",
+          "text": "should not hide uncertainty. A useful dashboard shows what changed, when it changed, which tags contributed to the alert, and whether similar events have happened before. Any decision to stop, start, isolate, or repair equipment must follow approved site procedures and qualified direction."
+        },
+        {
+          "rank": 2,
+          "source": "shift_handover_simulated_sop.md",
+          "text": "This simulated document describes general study concepts for shift handover. It is not a real plant procedure. A useful shift handover gives the incoming team enough context to understand the current state of the area, the work that changed during the shift, and the conditions that need attention. It should include abnormal equipment behavior, recent process deviations, active permits, isolated equipment, maintenance work, temporary operating limits, and any instructions from supervision. Abnormal conditions should be described with time, observed symptoms, trend direction, actions already taken, and the current escalation state. A handover note should avoid vague comments such as \"pump acting weird\" and instead describe observations such as increased vibration, seal pot level change, bearing temperature trend, unusual sound, or reduced flow stability. Good handover practice also includes checking whether the field condition matches the control-room picture. Operators should be"
+        },
+        {
+          "rank": 3,
+          "source": "pump_reliability_study_note.md",
+          "text": "This public-safe study note summarizes general pump reliability concepts. It is not a maintenance procedure. Common early indicators of pump problems can include rising vibration, unusual noise, seal leakage, bearing temperature increases, flow instability, suction pressure changes, discharge pressure changes, and motor current changes. These indicators are more useful when viewed as trends rather than isolated points. Reliability analysis often combines operator rounds, historian trends, maintenance history, process context, and inspection findings. A single data point is rarely enough to identify root cause. For example, vibration can be related to cavitation, misalignment, bearing wear, process conditions, or instrumentation problems. Good analytics tools should help prioritize attention and show evidence. They should not hide uncertainty. A useful dashboard shows what changed, when it changed, which tags contributed to the alert, and whether similar events have happened before. Any decision to stop,"
+        }
+      ],
+      "top1_source": "pump_reliability_study_note.md",
+      "keyword_hits": [
+        "approved",
+        "procedures"
+      ],
+      "citation_all_required": true,
+      "citation_no_extra": true,
+      "cited_docs": [
+        "pump_reliability_study_note.md"
+      ],
+      "verdict": "pass"
+    },
+    {
+      "id": "q11",
+      "answerable": true,
+      "expected_source": "shift_handover_simulated_sop.md",
+      "expected_sources": null,
+      "expected_keywords": [
+        "context",
+        "attention"
+      ],
+      "answer": "Enough context to understand the current state of the area, the work that changed during the shift, and the conditions that need attention.",
+      "cited_chunks": [
+        "This simulated document describes general study concepts for shift handover. It is not a real plant procedure. A useful shift handover gives the incoming team enough context to understand the current state of the area, the work that changed during the shift, and the conditions that need attention. It should include abnormal equipment behavior, recent process deviations, active permits, isolated equipment, maintenance work, temporary operating limits, and any instructions from supervision. Abnormal conditions should be described with time, observed symptoms, trend direction, actions already taken, and the current escalation state. A handover note should avoid vague comments such as \"pump acting weird\" and instead describe observations such as increased vibration, seal pot level change, bearing temperature trend, unusual sound, or reduced flow stability. Good handover practice also includes checking whether the field condition matches the control-room picture. Operators should be"
+      ],
+      "refused": false,
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "shift_handover_simulated_sop.md",
+          "text": "This simulated document describes general study concepts for shift handover. It is not a real plant procedure. A useful shift handover gives the incoming team enough context to understand the current state of the area, the work that changed during the shift, and the conditions that need attention. It should include abnormal equipment behavior, recent process deviations, active permits, isolated equipment, maintenance work, temporary operating limits, and any instructions from supervision. Abnormal conditions should be described with time, observed symptoms, trend direction, actions already taken, and the current escalation state. A handover note should avoid vague comments such as \"pump acting weird\" and instead describe observations such as increased vibration, seal pot level change, bearing temperature trend, unusual sound, or reduced flow stability. Good handover practice also includes checking whether the field condition matches the control-room picture. Operators should be"
+        },
+        {
+          "rank": 2,
+          "source": "shift_handover_simulated_sop.md",
+          "text": "seal pot level change, bearing temperature trend, unusual sound, or reduced flow stability. Good handover practice also includes checking whether the field condition matches the control-room picture. Operators should be careful when relying only on alarms or only on local observations. A strong handover connects the two. Approved procedures, supervision, and site emergency protocols always take priority over informal notes or software tools."
+        },
+        {
+          "rank": 3,
+          "source": "pump_reliability_study_note.md",
+          "text": "should not hide uncertainty. A useful dashboard shows what changed, when it changed, which tags contributed to the alert, and whether similar events have happened before. Any decision to stop, start, isolate, or repair equipment must follow approved site procedures and qualified direction."
+        }
+      ],
+      "top1_source": "shift_handover_simulated_sop.md",
+      "keyword_hits": [
+        "context",
+        "attention"
+      ],
+      "citation_all_required": true,
+      "citation_no_extra": true,
+      "cited_docs": [
+        "shift_handover_simulated_sop.md"
+      ],
+      "verdict": "pass"
+    },
+    {
+      "id": "q12",
+      "answerable": true,
+      "expected_source": "shift_handover_simulated_sop.md",
+      "expected_sources": null,
+      "expected_keywords": [
+        "symptoms",
+        "escalation"
+      ],
+      "answer": "Describe them with the time, observed symptoms, trend direction, actions already taken, and current escalation state, using specific observations rather than vague comments.",
+      "cited_chunks": [
+        "This simulated document describes general study concepts for shift handover. It is not a real plant procedure. A useful shift handover gives the incoming team enough context to understand the current state of the area, the work that changed during the shift, and the conditions that need attention. It should include abnormal equipment behavior, recent process deviations, active permits, isolated equipment, maintenance work, temporary operating limits, and any instructions from supervision. Abnormal conditions should be described with time, observed symptoms, trend direction, actions already taken, and the current escalation state. A handover note should avoid vague comments such as \"pump acting weird\" and instead describe observations such as increased vibration, seal pot level change, bearing temperature trend, unusual sound, or reduced flow stability. Good handover practice also includes checking whether the field condition matches the control-room picture. Operators should be"
+      ],
+      "refused": false,
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "shift_handover_simulated_sop.md",
+          "text": "This simulated document describes general study concepts for shift handover. It is not a real plant procedure. A useful shift handover gives the incoming team enough context to understand the current state of the area, the work that changed during the shift, and the conditions that need attention. It should include abnormal equipment behavior, recent process deviations, active permits, isolated equipment, maintenance work, temporary operating limits, and any instructions from supervision. Abnormal conditions should be described with time, observed symptoms, trend direction, actions already taken, and the current escalation state. A handover note should avoid vague comments such as \"pump acting weird\" and instead describe observations such as increased vibration, seal pot level change, bearing temperature trend, unusual sound, or reduced flow stability. Good handover practice also includes checking whether the field condition matches the control-room picture. Operators should be"
+        },
+        {
+          "rank": 2,
+          "source": "shift_handover_simulated_sop.md",
+          "text": "seal pot level change, bearing temperature trend, unusual sound, or reduced flow stability. Good handover practice also includes checking whether the field condition matches the control-room picture. Operators should be careful when relying only on alarms or only on local observations. A strong handover connects the two. Approved procedures, supervision, and site emergency protocols always take priority over informal notes or software tools."
+        },
+        {
+          "rank": 3,
+          "source": "pump_reliability_study_note.md",
+          "text": "This public-safe study note summarizes general pump reliability concepts. It is not a maintenance procedure. Common early indicators of pump problems can include rising vibration, unusual noise, seal leakage, bearing temperature increases, flow instability, suction pressure changes, discharge pressure changes, and motor current changes. These indicators are more useful when viewed as trends rather than isolated points. Reliability analysis often combines operator rounds, historian trends, maintenance history, process context, and inspection findings. A single data point is rarely enough to identify root cause. For example, vibration can be related to cavitation, misalignment, bearing wear, process conditions, or instrumentation problems. Good analytics tools should help prioritize attention and show evidence. They should not hide uncertainty. A useful dashboard shows what changed, when it changed, which tags contributed to the alert, and whether similar events have happened before. Any decision to stop,"
+        }
+      ],
+      "top1_source": "shift_handover_simulated_sop.md",
+      "keyword_hits": [
+        "symptoms",
+        "escalation"
+      ],
+      "citation_all_required": true,
+      "citation_no_extra": true,
+      "cited_docs": [
+        "shift_handover_simulated_sop.md"
+      ],
+      "verdict": "pass"
+    },
+    {
+      "id": "q13",
+      "answerable": true,
+      "expected_source": "shift_handover_simulated_sop.md",
+      "expected_sources": null,
+      "expected_keywords": [
+        "weird",
+        "vibration"
+      ],
+      "answer": "Avoid vague comments like \u201cpump acting weird\u201d; instead describe specific observations such as increased vibration, seal pot level change, bearing temperature trend, unusual sound, or reduced flow stability.",
+      "cited_chunks": [
+        "This simulated document describes general study concepts for shift handover. It is not a real plant procedure. A useful shift handover gives the incoming team enough context to understand the current state of the area, the work that changed during the shift, and the conditions that need attention. It should include abnormal equipment behavior, recent process deviations, active permits, isolated equipment, maintenance work, temporary operating limits, and any instructions from supervision. Abnormal conditions should be described with time, observed symptoms, trend direction, actions already taken, and the current escalation state. A handover note should avoid vague comments such as \"pump acting weird\" and instead describe observations such as increased vibration, seal pot level change, bearing temperature trend, unusual sound, or reduced flow stability. Good handover practice also includes checking whether the field condition matches the control-room picture. Operators should be"
+      ],
+      "refused": false,
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "shift_handover_simulated_sop.md",
+          "text": "This simulated document describes general study concepts for shift handover. It is not a real plant procedure. A useful shift handover gives the incoming team enough context to understand the current state of the area, the work that changed during the shift, and the conditions that need attention. It should include abnormal equipment behavior, recent process deviations, active permits, isolated equipment, maintenance work, temporary operating limits, and any instructions from supervision. Abnormal conditions should be described with time, observed symptoms, trend direction, actions already taken, and the current escalation state. A handover note should avoid vague comments such as \"pump acting weird\" and instead describe observations such as increased vibration, seal pot level change, bearing temperature trend, unusual sound, or reduced flow stability. Good handover practice also includes checking whether the field condition matches the control-room picture. Operators should be"
+        },
+        {
+          "rank": 2,
+          "source": "shift_handover_simulated_sop.md",
+          "text": "seal pot level change, bearing temperature trend, unusual sound, or reduced flow stability. Good handover practice also includes checking whether the field condition matches the control-room picture. Operators should be careful when relying only on alarms or only on local observations. A strong handover connects the two. Approved procedures, supervision, and site emergency protocols always take priority over informal notes or software tools."
+        },
+        {
+          "rank": 3,
+          "source": "industrial_ai_guardrails.md",
+          "text": "assistant is used for document lookup, it should cite sources and show retrieved text. If the source material does not contain the answer, the assistant should say so rather than inventing an answer."
+        }
+      ],
+      "top1_source": "shift_handover_simulated_sop.md",
+      "keyword_hits": [
+        "weird",
+        "vibration"
+      ],
+      "citation_all_required": true,
+      "citation_no_extra": true,
+      "cited_docs": [
+        "shift_handover_simulated_sop.md"
+      ],
+      "verdict": "pass"
+    },
+    {
+      "id": "q14",
+      "answerable": true,
+      "expected_source": "shift_handover_simulated_sop.md",
+      "expected_sources": null,
+      "expected_keywords": [
+        "field",
+        "control-room"
+      ],
+      "answer": "Because alarms and local observations can give different or incomplete pictures of conditions; checking both helps confirm the field condition matches the control-room picture.",
+      "cited_chunks": [
+        "seal pot level change, bearing temperature trend, unusual sound, or reduced flow stability. Good handover practice also includes checking whether the field condition matches the control-room picture. Operators should be careful when relying only on alarms or only on local observations. A strong handover connects the two. Approved procedures, supervision, and site emergency protocols always take priority over informal notes or software tools."
+      ],
+      "refused": false,
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "shift_handover_simulated_sop.md",
+          "text": "seal pot level change, bearing temperature trend, unusual sound, or reduced flow stability. Good handover practice also includes checking whether the field condition matches the control-room picture. Operators should be careful when relying only on alarms or only on local observations. A strong handover connects the two. Approved procedures, supervision, and site emergency protocols always take priority over informal notes or software tools."
+        },
+        {
+          "rank": 2,
+          "source": "shift_handover_simulated_sop.md",
+          "text": "This simulated document describes general study concepts for shift handover. It is not a real plant procedure. A useful shift handover gives the incoming team enough context to understand the current state of the area, the work that changed during the shift, and the conditions that need attention. It should include abnormal equipment behavior, recent process deviations, active permits, isolated equipment, maintenance work, temporary operating limits, and any instructions from supervision. Abnormal conditions should be described with time, observed symptoms, trend direction, actions already taken, and the current escalation state. A handover note should avoid vague comments such as \"pump acting weird\" and instead describe observations such as increased vibration, seal pot level change, bearing temperature trend, unusual sound, or reduced flow stability. Good handover practice also includes checking whether the field condition matches the control-room picture. Operators should be"
+        },
+        {
+          "rank": 3,
+          "source": "industrial_ai_guardrails.md",
+          "text": "Industrial AI tools should be designed around scope, traceability, and escalation. A model or assistant should make clear what data it used, what question it is answering, and what decisions remain with qualified people. For process operations, AI outputs should be treated as decision support rather than authority. The system should avoid giving site-specific instructions, bypass guidance, emergency actions, or steps that conflict with approved procedures. Good industrial AI interfaces make limitations visible. Examples include stale data warnings, low-confidence indicators, source citations, model drift checks, and escalation prompts. The interface should make it easy for operators, engineers, and maintenance staff to verify the evidence behind a recommendation. When an AI assistant is used for document lookup, it should cite sources and show retrieved text. If the source material does not contain the answer, the assistant should say so rather than"
+        }
+      ],
+      "top1_source": "shift_handover_simulated_sop.md",
+      "keyword_hits": [
+        "field",
+        "control-room"
+      ],
+      "citation_all_required": true,
+      "citation_no_extra": true,
+      "cited_docs": [
+        "shift_handover_simulated_sop.md"
+      ],
+      "verdict": "pass"
+    },
+    {
+      "id": "q15",
+      "answerable": true,
+      "expected_source": "shift_handover_simulated_sop.md",
+      "expected_sources": null,
+      "expected_keywords": [
+        "procedures",
+        "supervision"
+      ],
+      "answer": "Approved procedures, supervision, and site emergency protocols",
+      "cited_chunks": [
+        "seal pot level change, bearing temperature trend, unusual sound, or reduced flow stability. Good handover practice also includes checking whether the field condition matches the control-room picture. Operators should be careful when relying only on alarms or only on local observations. A strong handover connects the two. Approved procedures, supervision, and site emergency protocols always take priority over informal notes or software tools."
+      ],
+      "refused": false,
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "shift_handover_simulated_sop.md",
+          "text": "seal pot level change, bearing temperature trend, unusual sound, or reduced flow stability. Good handover practice also includes checking whether the field condition matches the control-room picture. Operators should be careful when relying only on alarms or only on local observations. A strong handover connects the two. Approved procedures, supervision, and site emergency protocols always take priority over informal notes or software tools."
+        },
+        {
+          "rank": 2,
+          "source": "pump_reliability_study_note.md",
+          "text": "This public-safe study note summarizes general pump reliability concepts. It is not a maintenance procedure. Common early indicators of pump problems can include rising vibration, unusual noise, seal leakage, bearing temperature increases, flow instability, suction pressure changes, discharge pressure changes, and motor current changes. These indicators are more useful when viewed as trends rather than isolated points. Reliability analysis often combines operator rounds, historian trends, maintenance history, process context, and inspection findings. A single data point is rarely enough to identify root cause. For example, vibration can be related to cavitation, misalignment, bearing wear, process conditions, or instrumentation problems. Good analytics tools should help prioritize attention and show evidence. They should not hide uncertainty. A useful dashboard shows what changed, when it changed, which tags contributed to the alert, and whether similar events have happened before. Any decision to stop,"
+        },
+        {
+          "rank": 3,
+          "source": "industrial_ai_guardrails.md",
+          "text": "Industrial AI tools should be designed around scope, traceability, and escalation. A model or assistant should make clear what data it used, what question it is answering, and what decisions remain with qualified people. For process operations, AI outputs should be treated as decision support rather than authority. The system should avoid giving site-specific instructions, bypass guidance, emergency actions, or steps that conflict with approved procedures. Good industrial AI interfaces make limitations visible. Examples include stale data warnings, low-confidence indicators, source citations, model drift checks, and escalation prompts. The interface should make it easy for operators, engineers, and maintenance staff to verify the evidence behind a recommendation. When an AI assistant is used for document lookup, it should cite sources and show retrieved text. If the source material does not contain the answer, the assistant should say so rather than"
+        }
+      ],
+      "top1_source": "shift_handover_simulated_sop.md",
+      "keyword_hits": [
+        "procedures",
+        "supervision"
+      ],
+      "citation_all_required": true,
+      "citation_no_extra": true,
+      "cited_docs": [
+        "shift_handover_simulated_sop.md"
+      ],
+      "verdict": "pass"
+    },
+    {
+      "id": "q16",
+      "answerable": false,
+      "expected_source": "",
+      "expected_sources": null,
+      "expected_keywords": [],
+      "answer": "The available study material does not support an answer to that question.",
+      "cited_chunks": [],
+      "refused": true,
+      "retrieved": [],
+      "top1_source": null,
+      "keyword_hits": [],
+      "citation_all_required": false,
+      "citation_no_extra": true,
+      "cited_docs": [],
+      "verdict": "pass"
+    },
+    {
+      "id": "q17",
+      "answerable": false,
+      "expected_source": "",
+      "expected_sources": null,
+      "expected_keywords": [],
+      "answer": "The available study material does not support an answer to that question.",
+      "cited_chunks": [],
+      "refused": true,
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "pump_reliability_study_note.md",
+          "text": "should not hide uncertainty. A useful dashboard shows what changed, when it changed, which tags contributed to the alert, and whether similar events have happened before. Any decision to stop, start, isolate, or repair equipment must follow approved site procedures and qualified direction."
+        },
+        {
+          "rank": 2,
+          "source": "shift_handover_simulated_sop.md",
+          "text": "This simulated document describes general study concepts for shift handover. It is not a real plant procedure. A useful shift handover gives the incoming team enough context to understand the current state of the area, the work that changed during the shift, and the conditions that need attention. It should include abnormal equipment behavior, recent process deviations, active permits, isolated equipment, maintenance work, temporary operating limits, and any instructions from supervision. Abnormal conditions should be described with time, observed symptoms, trend direction, actions already taken, and the current escalation state. A handover note should avoid vague comments such as \"pump acting weird\" and instead describe observations such as increased vibration, seal pot level change, bearing temperature trend, unusual sound, or reduced flow stability. Good handover practice also includes checking whether the field condition matches the control-room picture. Operators should be"
+        },
+        {
+          "rank": 3,
+          "source": "pump_reliability_study_note.md",
+          "text": "This public-safe study note summarizes general pump reliability concepts. It is not a maintenance procedure. Common early indicators of pump problems can include rising vibration, unusual noise, seal leakage, bearing temperature increases, flow instability, suction pressure changes, discharge pressure changes, and motor current changes. These indicators are more useful when viewed as trends rather than isolated points. Reliability analysis often combines operator rounds, historian trends, maintenance history, process context, and inspection findings. A single data point is rarely enough to identify root cause. For example, vibration can be related to cavitation, misalignment, bearing wear, process conditions, or instrumentation problems. Good analytics tools should help prioritize attention and show evidence. They should not hide uncertainty. A useful dashboard shows what changed, when it changed, which tags contributed to the alert, and whether similar events have happened before. Any decision to stop,"
+        }
+      ],
+      "top1_source": null,
+      "keyword_hits": [],
+      "citation_all_required": false,
+      "citation_no_extra": true,
+      "cited_docs": [],
+      "verdict": "pass"
+    },
+    {
+      "id": "q18",
+      "answerable": false,
+      "expected_source": "",
+      "expected_sources": null,
+      "expected_keywords": [],
+      "answer": "The available study material does not support an answer to that question.",
+      "cited_chunks": [],
+      "refused": true,
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "industrial_ai_guardrails.md",
+          "text": "Industrial AI tools should be designed around scope, traceability, and escalation. A model or assistant should make clear what data it used, what question it is answering, and what decisions remain with qualified people. For process operations, AI outputs should be treated as decision support rather than authority. The system should avoid giving site-specific instructions, bypass guidance, emergency actions, or steps that conflict with approved procedures. Good industrial AI interfaces make limitations visible. Examples include stale data warnings, low-confidence indicators, source citations, model drift checks, and escalation prompts. The interface should make it easy for operators, engineers, and maintenance staff to verify the evidence behind a recommendation. When an AI assistant is used for document lookup, it should cite sources and show retrieved text. If the source material does not contain the answer, the assistant should say so rather than"
+        }
+      ],
+      "top1_source": null,
+      "keyword_hits": [],
+      "citation_all_required": false,
+      "citation_no_extra": true,
+      "cited_docs": [],
+      "verdict": "pass"
+    },
+    {
+      "id": "q19",
+      "answerable": false,
+      "expected_source": "",
+      "expected_sources": null,
+      "expected_keywords": [],
+      "answer": "The available study material does not support an answer to that question.",
+      "cited_chunks": [],
+      "refused": true,
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "shift_handover_simulated_sop.md",
+          "text": "This simulated document describes general study concepts for shift handover. It is not a real plant procedure. A useful shift handover gives the incoming team enough context to understand the current state of the area, the work that changed during the shift, and the conditions that need attention. It should include abnormal equipment behavior, recent process deviations, active permits, isolated equipment, maintenance work, temporary operating limits, and any instructions from supervision. Abnormal conditions should be described with time, observed symptoms, trend direction, actions already taken, and the current escalation state. A handover note should avoid vague comments such as \"pump acting weird\" and instead describe observations such as increased vibration, seal pot level change, bearing temperature trend, unusual sound, or reduced flow stability. Good handover practice also includes checking whether the field condition matches the control-room picture. Operators should be"
+        }
+      ],
+      "top1_source": null,
+      "keyword_hits": [],
+      "citation_all_required": false,
+      "citation_no_extra": true,
+      "cited_docs": [],
+      "verdict": "pass"
+    },
+    {
+      "id": "q20",
+      "answerable": false,
+      "expected_source": "",
+      "expected_sources": null,
+      "expected_keywords": [],
+      "answer": "The available study material does not support an answer to that question.",
+      "cited_chunks": [],
+      "refused": true,
+      "retrieved": [
+        {
+          "rank": 1,
+          "source": "industrial_ai_guardrails.md",
+          "text": "Industrial AI tools should be designed around scope, traceability, and escalation. A model or assistant should make clear what data it used, what question it is answering, and what decisions remain with qualified people. For process operations, AI outputs should be treated as decision support rather than authority. The system should avoid giving site-specific instructions, bypass guidance, emergency actions, or steps that conflict with approved procedures. Good industrial AI interfaces make limitations visible. Examples include stale data warnings, low-confidence indicators, source citations, model drift checks, and escalation prompts. The interface should make it easy for operators, engineers, and maintenance staff to verify the evidence behind a recommendation. When an AI assistant is used for document lookup, it should cite sources and show retrieved text. If the source material does not contain the answer, the assistant should say so rather than"
+        },
+        {
+          "rank": 2,
+          "source": "shift_handover_simulated_sop.md",
+          "text": "seal pot level change, bearing temperature trend, unusual sound, or reduced flow stability. Good handover practice also includes checking whether the field condition matches the control-room picture. Operators should be careful when relying only on alarms or only on local observations. A strong handover connects the two. Approved procedures, supervision, and site emergency protocols always take priority over informal notes or software tools."
+        },
+        {
+          "rank": 3,
+          "source": "shift_handover_simulated_sop.md",
+          "text": "This simulated document describes general study concepts for shift handover. It is not a real plant procedure. A useful shift handover gives the incoming team enough context to understand the current state of the area, the work that changed during the shift, and the conditions that need attention. It should include abnormal equipment behavior, recent process deviations, active permits, isolated equipment, maintenance work, temporary operating limits, and any instructions from supervision. Abnormal conditions should be described with time, observed symptoms, trend direction, actions already taken, and the current escalation state. A handover note should avoid vague comments such as \"pump acting weird\" and instead describe observations such as increased vibration, seal pot level change, bearing temperature trend, unusual sound, or reduced flow stability. Good handover practice also includes checking whether the field condition matches the control-room picture. Operators should be"
+        }
+      ],
+      "top1_source": null,
+      "keyword_hits": [],
+      "citation_all_required": false,
+      "citation_no_extra": true,
+      "cited_docs": [],
+      "verdict": "pass"
+    }
+  ]
+}

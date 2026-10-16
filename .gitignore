@@ -1,0 +1,53 @@
+# Python bytecode and caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.pyright/
+.cache/
+
+# Virtual environments and local configuration
+.venv/
+venv/
+env/
+.env
+.env.*
+!.env.example
+.python-version
+
+# Test and coverage output
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+
+# Runtime output
+logs/
+*.log
+.streamlit/
+
+# Generated packaging output
+dist/
+build/
+*.egg-info/
+wheels/
+
+# Editor and operating-system files
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# Local data, documents and model weights
+data/
+projects/operator_rag/documents/*.pdf
+*.gguf
+*.safetensors
+*.pt
+*.pkl
+*.joblib
+*.onnx
+.ipynb_checkpoints/
