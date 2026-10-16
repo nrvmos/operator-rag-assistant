@@ -15,14 +15,14 @@ I'm Nathan Ramos. I ran chemical process units for more than ten years at NOVA C
 
 I tested it against a baseline with no AI in it, which just returns the best-matching passage, so the table shows what the language model actually adds.
 
-| Question set | Questions | Cited the right source | Refused correctly | Answer had the key facts* | Baseline, no AI |
+| Question set | Questions | Cited the right source | Refused correctly | Answer had the key facts* | No-AI baseline: right document ranked first |
 |---|---:|---:|---:|---:|---:|
 | Easy | 20 | 93.3% | 100% (5 of 5) | 100% | 100% |
 | Hard | 12 | 100% | n/a | 41.7% | 75% |
 
 \*This counts whether the expected keywords appear in the answer. It doesn't judge whether the answer is right.
 
-The first question set turned out to be too easy, because the baseline already found the right document every time. So I wrote a harder set with reworded questions, questions that need two documents, and near-miss distractors. That's where the model and the baseline pull apart. Every number here comes from a single run of one local model (27B, 4-bit, temperature 0) over three simulated documents. A replay script recomputes the figures from the saved raw outputs. The full method is in [projects/operator_rag/README.md](projects/operator_rag/README.md).
+The first question set turned out to be too easy, because the baseline already found the right document every time. So I wrote a harder set with reworded questions, questions that need two documents, and near-miss distractors. On the hard set, the model cites the right source every time while the no-AI baseline ranks the right document first only 75% of the time. Part of that gap comes from the model seeing the top 3 passages instead of 1. The weak spot is the answers themselves: only 41.7% contain all the expected key facts, so the model often finds the right passage and then leaves part of the answer out. The baseline column measures finding the document, not answering, so it isn't directly comparable with the key-facts column. Every number here comes from a single run of one local model (27B, 4-bit, temperature 0) over three simulated documents. A replay script recomputes the figures from the saved raw outputs. The full method is in [projects/operator_rag/README.md](projects/operator_rag/README.md).
 
 ## How it works
 
