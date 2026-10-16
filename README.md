@@ -26,11 +26,10 @@ The first question set turned out to be too easy, because the baseline already f
 
 ## How it works
 
-```
-question -> TF-IDF search over document chunks -> top 3 passages -> local LLM -> answer + cited passages
-                                                                         |
-                                     cites a passage it wasn't given, or a live operating request -> refuse
-```
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/operator-rag-assistant-dark.png">
+  <img alt="A question passes a safety rule check, TF-IDF search for the top 3 passages, a local LLM limited to those passages, and a citation check. Failing any gate refuses and cites nothing." src="docs/operator-rag-assistant.png">
+</picture>
 
 ## Run it
 
